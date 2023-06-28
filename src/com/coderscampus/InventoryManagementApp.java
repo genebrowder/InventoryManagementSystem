@@ -1,4 +1,4 @@
-package coders.campus;
+package com.coderscampus;
 
 import java.nio.file.Path;
 import java.util.List;
@@ -8,7 +8,6 @@ import com.coderscampus.domain.Product;
 import com.coderscampus.service.CsvReaderService;
 import com.coderscampus.service.ReportGeneratorService;
 
-
 public class InventoryManagementApp {
 
 	public InventoryManagementApp() {
@@ -16,7 +15,6 @@ public class InventoryManagementApp {
 	}
 
 	public static void main(String[] args) {
-				
 		CsvReaderService csvReaderService = new CsvReaderService();
 		List<Product> productList =  csvReaderService.readProductsFromFile(Path.of("productDataFile.txt"));
 		
