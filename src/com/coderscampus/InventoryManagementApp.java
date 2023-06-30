@@ -10,17 +10,14 @@ import com.coderscampus.service.ReportGeneratorService;
 
 public class InventoryManagementApp {
 
-	public InventoryManagementApp() {
-		// TODO Auto-generated constructor stub
-	}
+    public InventoryManagementApp() {
+    }
 
-	public static void main(String[] args) {
-		CsvReaderService csvReaderService = new CsvReaderService();
-		List<Product> productList =  csvReaderService.readProductsFromFile(Path.of("productDataFile.txt"));
-		
-		ReportGeneratorService reportGeneratorService = new ReportGeneratorService();
-		reportGeneratorService.generateLowInventoryReport((ArrayList<Product>)productList);
+    public static void main(String[] args) {
+        CsvReaderService csvReaderService = new CsvReaderService();
+        List<Product> productList = csvReaderService.readProductsFromFile(Path.of("productDataFile.txt"));
 
-	}
-
+        ReportGeneratorService reportGeneratorService = new ReportGeneratorService();
+        reportGeneratorService.generateLowInventoryReport((ArrayList<Product>) productList);
+    }
 }

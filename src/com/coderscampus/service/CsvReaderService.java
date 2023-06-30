@@ -11,7 +11,6 @@ import com.coderscampus.domain.Product;
 public class CsvReaderService {
 
     public CsvReaderService() {
-
     }
 
     public List<Product> readProductsFromFile(Path path) {
@@ -37,7 +36,6 @@ public class CsvReaderService {
                         productList.add(product);
                     });
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             System.out.println("There was a problem reading the file");
             e.printStackTrace();
         }
